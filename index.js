@@ -120,13 +120,14 @@ function updateScore(){
 
 function checkLose(){
     if(ball.y + ball.radius >= 400){
+        alert("You Lose");
         location.reload();
     }
 }
 
 function checkWin(){
     if(brickLength <= 0){
-        alert("You Win")
+        alert("You Win");
         brickLength = bricks.cols * bricks.rows;
         localStorage.reload();
     }
