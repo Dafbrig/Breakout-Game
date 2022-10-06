@@ -85,7 +85,7 @@ function moveBall(){
     ball.x += ball.dx;
     ball.y -= ball.dy;
     if(ball.x + 7 >= 600 || ball.x <= 7) ball.dx =- ball.dx;
-    if(ball.y <=0 || ball.y + 7 >= 400) ball.dy =- ball.dy;
+    if(ball.y <= 0 || ball.y + 7 >= 400) ball.dy =- ball.dy;
     if(ball.x + ball.radius > player.x 
         && ball.x <= player.x + player.w 
         && ball.y + ball.radius >= player.y) {
