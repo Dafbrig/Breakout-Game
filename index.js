@@ -118,7 +118,7 @@ function updateScore(){
     scoreSpan.innerHTML = score;
 }
 
-function checkLoose(){
+function checkLose(){
     if(ball.y + ball.radius >= 400){
         location.reload();
     }
@@ -135,7 +135,7 @@ function checkWin(){
 function update(){
     movePlayer();
     moveBall();
-    checkLoose();
+    checkLose();
     checkWin();
 }
 
