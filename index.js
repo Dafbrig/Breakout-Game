@@ -77,14 +77,14 @@ document.addEventListener('keyup', (e) => {
 function movePlayer(){
     if(playerDirection === "left") player.x -= player.dx;
     if(playerDirection === "right") player.x += player.dx;
-    if(player.x <=0) player.x=0;
-    if(player.x >=600 - player.w) player.x = 600 - player.w;
+    if(player.x <= 0) player.x = 0;
+    if(player.x >= 600 - player.w) player.x = 600 - player.w;
 }
 
 function moveBall(){
     ball.x += ball.dx;
     ball.y -= ball.dy;
-    if(ball.x + 7 >=600 || ball.x <= 7) ball.dx =- ball.dx;
+    if(ball.x + 7 >= 600 || ball.x <= 7) ball.dx =- ball.dx;
     if(ball.y <=0 || ball.y + 7 >= 400) ball.dy =- ball.dy;
     if(ball.x + ball.radius > player.x 
         && ball.x <= player.x + player.w 
@@ -107,7 +107,7 @@ function checkBricksCollision(brick){
         && ball.y <= brick.y + brick.h){
             ball.dy =- ball.dy;
             brick.visible = false;
-            brickLength --;
+            brickLength--;
             updateScore();
         }
 }
