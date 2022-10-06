@@ -60,7 +60,7 @@ function game(){
 }
 requestAnimationFrame(game);
 
-//---Accion--//
+//-----------Accion---------------//
 
 let playerDirection = " ";
 
