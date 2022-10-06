@@ -19,8 +19,8 @@ const ball = {
     x: 305,
     y: 350,
     radius: 7,
-    dx: 4,
-    dy: 9,
+    dx: 2,
+    dy: 5,
 }
 
 const bricks = {
@@ -84,8 +84,8 @@ function movePlayer(){
 function moveBall(){
     ball.x += ball.dx;
     ball.y -= ball.dy;
-    if(ball.x + ball.radius >=600 || ball.x <= ball.radius) ball.dx =- ball.dx;
-    if(ball.y <=0 || ball.y + ball.radius >= 400) ball.dy =- ball.dy;
+    if(ball.x + 7 >=600 || ball.x <= 7) ball.dx =- ball.dx;
+    if(ball.y <=0 || ball.y + 7 >= 400) ball.dy =- ball.dy;
     if(ball.x + ball.radius > player.x 
         && ball.x <= player.x + player.w 
         && ball.y + ball.radius >= player.y) {
@@ -100,7 +100,7 @@ function moveBall(){
     })
 }
 
-function checkBricksCollision(){
+function checkBricksCollision(brick){
     if(ball.x >= brick.x
         && ball.x + ball.radius <= brick.x + brick.w
         && ball.y + ball.radius >= brick.y
